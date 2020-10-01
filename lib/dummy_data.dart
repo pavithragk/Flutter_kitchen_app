@@ -1,5 +1,7 @@
+// Post and Category data
+
 import 'package:flutter/material.dart';
-import 'package:refactring_kitchen/models/card.dart';
+import 'package:refactring_kitchen/models/post.dart';
 import 'package:refactring_kitchen/models/category.dart';
 
 List<Post> DUMMY_MEALS = [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:refactring_kitchen/dummy_data.dart';
-import 'package:refactring_kitchen/models/card.dart';
+import 'package:refactring_kitchen/models/post.dart';
 import 'package:refactring_kitchen/widgets/card_item.dart';
 
 class CategoryDetailScreen extends StatelessWidget {
@@ -13,6 +13,7 @@ class CategoryDetailScreen extends StatelessWidget {
     final categoryTitle = args["title"];
     List<Post> categoryDetails = [];
 
+    //filters posts based on the category id
     for (int i = 0; i < DUMMY_MEALS.length; i++) {
       if (DUMMY_MEALS[i].categories.contains(categoryId)) {
         categoryDetails.add(DUMMY_MEALS[i]);

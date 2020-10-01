@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:refactring_kitchen/dummy_data.dart';
-import 'package:refactring_kitchen/models/card.dart';
+import 'package:refactring_kitchen/models/post.dart';
 import 'package:refactring_kitchen/widgets/card_item.dart';
 
 class SearchScreen extends StatefulWidget {

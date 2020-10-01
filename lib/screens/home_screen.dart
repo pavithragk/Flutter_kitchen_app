@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:refactring_kitchen/dummy_data.dart';
-import 'package:refactring_kitchen/models/card.dart';
+import 'package:refactring_kitchen/models/post.dart';
 import 'package:refactring_kitchen/widgets/card_item.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -33,6 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     List<Post> _filteredList = allItemsList;
+
+    //filters posts based on the veg and non veg value
     _filteredList = allItemsList.where((element) {
       return element.isVeg == veg && element.isNonVeg == nonVeg ||
           element.isVeg == !veg && element.isNonVeg == nonVeg;

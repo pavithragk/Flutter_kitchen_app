@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:refactring_kitchen/dummy_data.dart';
-import 'package:refactring_kitchen/models/card.dart';
+import 'package:refactring_kitchen/models/post.dart';
 import 'package:refactring_kitchen/widgets/meal_item.dart';
 
 class PostDetailsScreen extends StatelessWidget {
@@ -13,6 +13,7 @@ class PostDetailsScreen extends StatelessWidget {
     final categoryTitle =
         DUMMY_MEALS.firstWhere((element) => element.id == args["id"]);
     print(categoryId);
+
     Post itemDetails;
     for (int i = 0; i <= DUMMY_MEALS.length; i++) {
       if (DUMMY_MEALS[i].id == categoryId) {
