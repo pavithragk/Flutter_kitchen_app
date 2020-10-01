@@ -11,15 +11,15 @@ A new Flutter project.
 
 The root folder is split into 3 sections  models, screens and widgets.
 
-# Models
+## Models
 
  Contains all the application's data models.
  
-# Screens
+## Screens
 
 Contains actual functionality of the app related to each screen.
 
-# Widgets
+## Widgets
 
  Contains all the code relating to the user interface
 
