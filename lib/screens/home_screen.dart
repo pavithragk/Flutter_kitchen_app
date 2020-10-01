@@ -5,8 +5,6 @@ import 'package:refactring_kitchen/widgets/card_item.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = '/home - screen';
-  // final List<Post> filteredPosts;
-  // HomeScreen(this.filteredPosts);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -28,35 +26,18 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   bool veg = false;
-
   bool nonVeg = false;
 
   List<Post> allItemsList = DUMMY_MEALS;
 
-  // @override
-  // void initState() {
-
-  //   print(allItemsList);
-  //   // displayList = filteredList;
-  //   super.initState();
-  // // }
-
   @override
   Widget build(BuildContext context) {
     List<Post> _filteredList = allItemsList;
-    // print(_filteredList);
     _filteredList = allItemsList.where((element) {
       return element.isVeg == veg && element.isNonVeg == nonVeg ||
           element.isVeg == !veg && element.isNonVeg == nonVeg;
     }).toList();
-    // print(_filteredList);
 
-    // List<Post> _filter1 = DUMMY_MEALS.where((element) {
-    //   return element.isVeg == veg;
-    // }).toList();
-    // List<Post> _filter2 = DUMMY_MEALS.where((element) {
-    //   return element.isNonVeg == nonVeg;
-    // }).toList();
     return Scaffold(
         body: Column(
       children: [

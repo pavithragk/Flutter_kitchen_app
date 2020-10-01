@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:refactring_kitchen/dummy_data.dart';
 
 class MealItem extends StatelessWidget {
   final String id;
@@ -21,10 +20,7 @@ class MealItem extends StatelessWidget {
   Widget buildSectionTitle(BuildContext context, String text) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
-      child: Text(
-        text,
-        style: Theme.of(context).textTheme.title,
-      ),
+      child: Text(text, style: Theme.of(context).textTheme.headline6),
     );
   }
 
@@ -92,7 +88,11 @@ class MealItem extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: CircleAvatar(
-                          child: Text('# ${(index + 1)}'),
+                          backgroundColor: Theme.of(context).primaryColor,
+                          child: Text(
+                            '# ${(index + 1)}',
+                            style: TextStyle(color: Colors.black),
+                          ),
                         ),
                         title: Text(
                           steps[index],

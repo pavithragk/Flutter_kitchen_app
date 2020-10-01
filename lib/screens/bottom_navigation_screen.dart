@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:refactring_kitchen/models/card.dart';
 import 'package:refactring_kitchen/screens/category_screen.dart';
 import 'package:refactring_kitchen/screens/home_screen.dart';
 import 'package:refactring_kitchen/screens/search_screen.dart';
@@ -24,17 +23,7 @@ class BottomNavigationScreenState extends State<BottomNavigationScreen> {
       'title': 'Select your category',
     },
   ];
-
-  // @override
-  // void initState() {
-  //   _screens = [
-
-  //     // ProfileScreen(),
-  //   ];
-  // }
-
   int _selectedIndex = 0;
-  // static List<Post> get filteredPosts => [];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -58,30 +47,19 @@ class BottomNavigationScreenState extends State<BottomNavigationScreen> {
         currentIndex: _selectedIndex,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Colors.black87),
+              icon: Icon(
+                Icons.home,
+                color: Colors.black87,
+              ),
               title: Text('Home')),
           BottomNavigationBarItem(
-              icon: IconButton(
-                icon: Icon(Icons.search, color: Colors.black87),
-              ),
+              icon: Icon(Icons.search, color: Colors.black87),
               title: Text('search')),
           BottomNavigationBarItem(
-              icon: IconButton(
-                icon: Icon(Icons.category, color: Colors.black87),
-              ),
+              icon: Icon(Icons.category, color: Colors.black87),
               title: Text('category')),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      // onPressed: () {
-      //   Navigator.push(
-      //     context,
-      //     MaterialPageRoute(builder: (context) => AddPost()),
-      //   );
-      // },
-      // child: Icon(Icons.add, color: Colors.black),
-      // backgroundColor: Theme.of(context).primaryColor),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: _screens[_selectedIndex]['page'],
     );
   }

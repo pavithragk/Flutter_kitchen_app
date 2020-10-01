@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:refactring_kitchen/dummy_data.dart';
 import 'package:refactring_kitchen/models/card.dart';
-import 'package:refactring_kitchen/models/category.dart';
 import 'package:refactring_kitchen/widgets/card_item.dart';
-import 'package:refactring_kitchen/widgets/category_item.dart';
 
 class CategoryDetailScreen extends StatelessWidget {
   static const routeName = '/category-detail-screen';
-  // final List<Post> filteredPosts;
-  // CategoryDetailScreen(this.filteredPosts);
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +14,7 @@ class CategoryDetailScreen extends StatelessWidget {
     List<Post> categoryDetails = [];
 
     for (int i = 0; i < DUMMY_MEALS.length; i++) {
-      //  print(DUMMY_MEALS[i].categories.contains(categoryId));
       if (DUMMY_MEALS[i].categories.contains(categoryId)) {
-        // print(filteredScreen[i].isVeg);
         categoryDetails.add(DUMMY_MEALS[i]);
       }
     }
@@ -29,6 +23,7 @@ class CategoryDetailScreen extends StatelessWidget {
           title: Text(categoryTitle),
         ),
         body: ListView.builder(
+          itemCount: categoryDetails.length,
           itemBuilder: (context, index) {
             return CardItem(
                 categoryDetails[index].id,
@@ -36,7 +31,6 @@ class CategoryDetailScreen extends StatelessWidget {
                 categoryDetails[index].image,
                 categoryDetails[index].color);
           },
-          itemCount: categoryDetails.length,
         ));
   }
 }

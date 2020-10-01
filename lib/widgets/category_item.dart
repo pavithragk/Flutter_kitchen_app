@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:refactring_kitchen/screens/category_detail_screen.dart';
-import 'package:refactring_kitchen/screens/post_details_screen.dart';
 
 class CategoryItem extends StatelessWidget {
   final String id;
   final String title;
   final Color color;
-  // final List<String> categories;
 
   CategoryItem(
     this.id,
@@ -32,10 +30,7 @@ class CategoryItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(15),
       child: Container(
         padding: const EdgeInsets.all(15),
-        child: Text(
-          title,
-          style: Theme.of(context).textTheme.title,
-        ),
+        child: Text(title, style: Theme.of(context).textTheme.headline6),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [

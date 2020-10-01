@@ -12,13 +12,10 @@ class _State extends State<SearchScreen> {
   TextEditingController textEditingController = TextEditingController();
   List<Post> autoList = DUMMY_MEALS;
   List<Post> filteredList = [];
-  // List<Post> displayList = [];
-  bool searched = false;
 
   @override
   void initState() {
     filteredList.addAll(autoList);
-    // displayList = filteredList;
     super.initState();
   }
 

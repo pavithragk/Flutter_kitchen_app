@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:refactring_kitchen/screens/post_details_screen.dart';
-import 'package:refactring_kitchen/screens/post_details_screen.dart';
 
 class CardItem extends StatelessWidget {
   final String id;
